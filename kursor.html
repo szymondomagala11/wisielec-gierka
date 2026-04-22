@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+	<head charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kursor</title>
+	</head>
+	<style>
+		#kursor{
+		
+			width:100px;
+			height:100px;
+			background:red;
+			position:absolute;
+		}
+	</style>
+	<body>
+<div id="kursor"></div>
+<script>
+const kursor = document.querySelector('#kursor')
+
+
+console.log(kursor)
+
+window.addEventListener('mousemove',move)
+
+function move(e){ 
+	console.log("X",e.clientX,"Y",e.clientY)
+	kursor.style.left = e.clientX + "px"
+	kursor.style.top = e.clientY + "px"
+}
+
+</script>
+
+
+
+	</body>
+</html>
